@@ -1,174 +1,162 @@
-<!DOCTYPE html><html lang="en">
+          <!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday mere mendhak 🐸💋</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ffd6e8, #fff);
-      color: #333;
-    }
-    .lock-screen {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    input {
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-    }
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 20px;
-      background: #ff6fa5;
-      color: white;
-      cursor: pointer;
-    }
-    .container {
-      display: none;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    section {
-      background: rgba(255,255,255,0.8);
-      border-radius: 20px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      text-align: center;
-      color: #ff4f8b;
-    }
-    .gallery img {
-      width: 100px;
-      border-radius: 12px;
-      margin: 5px;
-    }
-    footer {
-      text-align: center;
-      font-size: 14px;
-      opacity: 0.7;
-    }
-    </style>
-  <!-- 💗 Floating Hearts -->
-  <style>
-    .heart{
-      position: fixed;
-      bottom: -20px;
-      font-size: 20px;
-      animation: floatUp 6s linear forwards;
-      opacity: 0.8;
-      pointer-events:none;
-    }
-    @keyframes floatUp{
-      0%{transform:translateY(0) scale(1);opacity:1}
-      100%{transform:translateY(-100vh) scale(1.6);opacity:0}
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Happy Birthday 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Comic Sans MS', cursive;
+  background:linear-gradient(120deg,#ffd6e8,#ffeccf);
+  text-align:center;
+  overflow-x:hidden;
+}
+h1,h2{color:#ff4d88}
+.container{padding:20px}
+input{
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  font-size:16px;
+}
+button{
+  padding:10px 20px;
+  border-radius:20px;
+  border:none;
+  background:#ff4d88;
+  color:white;
+  font-size:16px;
+  margin-top:10px;
+}
+.hidden{display:none}
+.gallery img{
+  width:90%;
+  max-width:280px;
+  border-radius:20px;
+  margin:10px 0;
+}
+.frog{
+  width:120px;
+  margin-top:20px;
+}
+.heart{
+  position:fixed;
+  font-size:20px;
+  animation:float 4s linear infinite;
+}
+@keyframes float{
+  0%{transform:translateY(0);opacity:1}
+  100%{transform:translateY(-100vh);opacity:0}
+}
+footer{
+  margin:30px 0;
+  font-size:14px;
+}
+</style>
 </head>
-<body>  <!-- 🎶 Background Music -->  <audio id="bgMusic" loop autoplay>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
-  <button onclick="toggleMusic()" style="position:fixed;bottom:16px;right:16px;z-index:99;border-radius:50%;padding:12px">🎶</button>  <!-- PASSWORD SCREEN -->  <div class="lock-screen" id="lock">
-    <h2>🔒 Private Birthday Surprise</h2>
-    <p> 14-12-2024 </p>
-    <input type="password" id="password" placeholder="Enter password" />
-    <button onclick="unlock()">Open</button>
-    <p id="error" style="color:red;"></p>
-  </div>  <!-- MAIN WEBSITE -->  <div class="container" id="content"><!-- 🐸 Frog Sticker -->
-<img src="memory4.png" alt="frog" style="position:fixed;top:12px;left:12px;width:70px;z-index:5;filter:drop-shadow(0 4px 6px rgba(0,0,0,.2));">
+
+<body>
+
+<!-- 🔐 PASSWORD SCREEN -->
+<div class="container" id="lockScreen">
+  <h1>🔒 Private Birthday Surprise</h1>
+  <p>14-12-2024</p>
+  <input type="password" id="password" placeholder="Password daalo 💕">
+  <br>
+  <button onclick="checkPassword()">Open</button>
+</div>
+
+<!-- 🐸 Frog Sticker -->
+<img src="frog.png" style="position:fixed;top:12px;left:12px;width:70px;z-index:5;display:none" id="frogSticker">
+
+<!-- 🎉 MAIN CONTENT -->
+<div class="container hidden" id="mainContent">
 
 <section>
-  <h1>🎉 Happiest Birthday! 🎂</h1>
-  <p style="text-align:center;">
-    Yeh website sirf tumhare liye banayi hai 💕<br>
-    (Happiest Birthday mere jaan, ❤️ 😘 
-    ab mai apke pass hu nhi so apko gift nhi de skti hu isliye yeh fhlti si website banayi h bas apke liye as your birthday gift 🎁💕
-    ig apko acha lage i love you so much kuldeep jii🧿❤️)
-  </p>
+<h1>🎉 Happiest Birthday! 🎂</h1>
+<p>
+Yeh website sirf tumhare liye banayi hai 💕<br>
+(Happiest Birthday mere jaan ❤️😘  
+ab mai apke pass hu nhi so apko gift nhi de skti hu  
+isliye yeh fhlti si website banayi h bas apke liye  
+as your birthday gift 🎁💕  
+ig apko acha lage  
+i love you so much kuldeep jii 🧿❤️)
+</p>
 </section>
 
 <section>
-  <h2>💌 A Letter For You</h2>
-  <p>
-    My dear kuldeep ji,<br><br>
- ✨Happy Birthdeyyy Myy Love
-
-You are most favourite person in my life This day I wanna thank you for beingg my Life  I wanted to make you feel special and try to make you more happiest you're the best I've in my life LOVE YOU SO MUCH 💋💖♥️I'll loveyouh forever And I'll loveyouh alwayyss And you will forever be mine and I will forever be yours Once againn Happyyy birthdayy 🧿💕😘 <br><br> – Apki Jaan 💖 </p> </section>
-
-<section>
-  <h2>💞 Little Memories</h2>
-  <div class="gallery">
-    <img src="memory1.jpg" alt="memory" />
-    <img src="memory2.jpg" alt="memory" />
-    <img src="memory3.jpg" alt="memory" />
-    <img src="memory4.png" alt="cute" />
-  </div>
-  <p style="font-size:12px; text-align:center;">(Images main add kar dungi – tumhe bas files rakhni hain)</p>
+<h2>💌 A Letter For You</h2>
+<p>
+My dear kuldeep ji,<br><br>
+✨Happy Birthdeyyy Myy Love ✨<br><br>
+You are most favourite person in my life.  
+This day I wanna thank you for beingg my life.  
+I wanted to make you feel special and try to make you more happiest.  
+You're the best I've in my life.  
+LOVE YOU SO MUCH 💋💖♥️<br><br>
+I'll loveyouh forever and I'll loveyouh alwayyss.  
+You will forever be mine and I will forever be yours.  
+Once againn Happyyy birthdayy 🧿💕😘<br><br>
+– Apki Jaan 💖
+</p>
 </section>
 
 <section>
-  <h2>🎁 Final Wish</h2>
-  <p style="text-align:center;">
-    Yeh first time maine kisike liye website banayi h so ik ki bekar hi bani hogi so plzz judge mat kijiyega kuldeep jii 🌙✨🤧 
-    and i just want to tell you that mujhe chod ke kabhi bhi mat jaiyega plzzz kuldeep jii PLZZ i request you ❤️ 
-    and i love you soo much ♥️💋❤️💖
-  </p>
+<h2>💞 Little Memories</h2>
+<div class="gallery">
+  <img src="memory1.jpg">
+  <img src="memory2.jpg">
+  <img src="memory3.jpg">
+  <img src="memory4.png">
+</div>
 </section>
 
-<footer>
-  Made with 💗 just for you
-</footer>
+<section>
+<h2>🎁 Final Wish</h2>
+<p>
+Yeh first time maine kisike liye website banayi h  
+so ik ki bekar hi bani hogi so plzz judge mat kijiyega kuldeep jii 🌙✨🤧  
+and i just want to tell you that mujhe chod ke kabhi bhi mat jaiyega  
+plzzz kuldeep jii PLZZ i request you ❤️  
+and i love you soo much ♥️💋❤️💖
+</p>
+</section>
 
-  </div>  <script>
-    const correctPassword = "14-12-2024"; // CHANGE PASSWORD HERE
+<img src="frog.png" class="frog">
+<p>🐸 Your little lucky frog</p>
 
-    function unlock() {
-      const input = document.getElementById('password').value;
-      if (input === correctPassword) {
-        document.getElementById('lock').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
-        const m = document.getElementById('bgMusic');
-        m.currentTime = 37; // start from 0:37
-        m.play();
-        startHearts();
-      } else {
-        document.getElementById('error').innerText = 'Wrong password 😶';
-      }
-    }
+<footer>Made with 💗 just for you</footer>
+</div>
 
-    function toggleMusic(){
-      const m = document.getElementById('bgMusic');
-      if(m.paused){
-        m.currentTime = 37; // song starts from 0:37 sec
-        m.play();
-      } else {
-        m.pause();
-      }
-    }
+<audio id="music" src="music.mp3"></audio>
 
-    function startHearts(){
-      setInterval(()=>{
-        const h=document.createElement('div');
-        h.className='heart';
-        h.innerText='💗';
-        h.style.left=Math.random()*100+'vw';
-        document.body.appendChild(h);
-        setTimeout(()=>h.remove(),6000);
-      },700);
-    } else {
-        document.getElementById('error').innerText = 'Wrong password 😶';
-      }
-    }
-  </script></body>
-    </html>
+<script>
+function checkPassword(){
+  if(document.getElementById("password").value==="kuldeep"){
+    document.getElementById("lockScreen").style.display="none";
+    document.getElementById("mainContent").classList.remove("hidden");
+    document.getElementById("frogSticker").style.display="block";
+    const m=document.getElementById("music");
+    m.currentTime=37;
+    m.play();
+    setInterval(createHeart,300);
+  }else{
+    alert("Wrong password 😛");
+  }
+}
+function createHeart(){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  h.style.bottom="0";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),4000);
+}
+</script>
+
+</body>
+</html>
