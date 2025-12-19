@@ -1,8 +1,8 @@
-          <!DOCTYPE html>
+         <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy Birthday 💖</title>
+<title>Happy Birthday My love 💖</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -41,6 +41,14 @@ button{
   width:120px;
   margin-top:20px;
 }
+.letter-box{
+  display:none;
+  margin-top:15px;
+  background:white;
+  padding:15px;
+  border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
 .heart{
   position:fixed;
   font-size:20px;
@@ -62,33 +70,42 @@ footer{
 <!-- 🔐 PASSWORD SCREEN -->
 <div class="container" id="lockScreen">
   <h1>🔒 Private Birthday Surprise</h1>
-  <p>14-12-2024</p>
-  <input type="password" id="password" placeholder="Password daalo 💕">
+
+  <input type="password" id="password" placeholder="Password wahi date hai jab apne confess kiya tha that u love me🤭😅ab socho ki kya h password">
   <br>
   <button onclick="checkPassword()">Open</button>
 </div>
 
-<!-- 🐸 Frog Sticker -->
-<img src="frog.png" style="position:fixed;top:12px;left:12px;width:70px;z-index:5;display:none" id="frogSticker">
+<!-- 🐸 Frog sticker -->
+<img src="frog.png"
+style="position:fixed;top:12px;left:12px;width:70px;z-index:5;display:none"
+id="frogSticker">
 
-<!-- 🎉 MAIN CONTENT -->
+<!-- HAPPIEST BIRTHDAY MERE MENDHAK 🐸-->
 <div class="container hidden" id="mainContent">
 
 <section>
 <h1>🎉 Happiest Birthday! 🎂</h1>
 <p>
-Yeh website sirf tumhare liye banayi hai 💕<br>
+Yeh website sirf aapke liye banayi hai 💕<br>
 (Happiest Birthday mere jaan ❤️😘  
 ab mai apke pass hu nhi so apko gift nhi de skti hu  
-isliye yeh fhlti si website banayi h bas apke liye  
+isliye yeh website banayi h bas apke liye  
 as your birthday gift 🎁💕  
-ig apko acha lage  
+ig apko acha lage   
 i love you so much kuldeep jii 🧿❤️)
 </p>
 </section>
 
+<!-- 💌 TAP TO REVEAL LETTER -->
 <section>
 <h2>💌 A Letter For You</h2>
+
+<button onclick="revealLetter()" id="revealBtn">
+💌 Tap here to read my letter
+</button>
+
+<div class="letter-box" id="letterBox">
 <p>
 My dear kuldeep ji,<br><br>
 ✨Happy Birthdeyyy Myy Love ✨<br><br>
@@ -102,6 +119,7 @@ You will forever be mine and I will forever be yours.
 Once againn Happyyy birthdayy 🧿💕😘<br><br>
 – Apki Jaan 💖
 </p>
+</div>
 </section>
 
 <section>
@@ -109,8 +127,8 @@ Once againn Happyyy birthdayy 🧿💕😘<br><br>
 <div class="gallery">
   <img src="memory1.jpg">
   <img src="memory2.jpg">
-  <img src="memory3.jpg">
-  <img src="memory4.png">
+  
+  
 </div>
 </section>
 
@@ -126,7 +144,7 @@ and i love you soo much ♥️💋❤️💖
 </section>
 
 <img src="frog.png" class="frog">
-<p>Your love</p>
+<p>Apki chand </p>
 
 <footer>Made with 💗 just for you</footer>
 </div>
@@ -135,18 +153,26 @@ and i love you soo much ♥️💋❤️💖
 
 <script>
 function checkPassword(){
-  if(document.getElementById("password").value==="kuldeep"){
+  if(document.getElementById("password").value==="14-12-2024"){
     document.getElementById("lockScreen").style.display="none";
     document.getElementById("mainContent").classList.remove("hidden");
     document.getElementById("frogSticker").style.display="block";
+
     const m=document.getElementById("music");
     m.currentTime=37;
     m.play();
+
     setInterval(createHeart,300);
   }else{
     alert("Wrong password 😛");
   }
 }
+
+function revealLetter(){
+  document.getElementById("letterBox").style.display="block";
+  document.getElementById("revealBtn").style.display="none";
+}
+
 function createHeart(){
   const h=document.createElement("div");
   h.className="heart";
@@ -159,4 +185,4 @@ function createHeart(){
 </script>
 
 </body>
-</html>
+</html>   
