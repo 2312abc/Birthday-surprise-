@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(120deg, #ffd6e8, #ffeccf);
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: #ff4d88;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      background: #ff4d88;
+      color: white;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .memory img {
+      width: 90%;
+      max-width: 300px;
+      border-radius: 20px;
+      margin: 10px 0;
+    }
+
+    .frog {
+      width: 120px;
+      margin-top: 20px;
+    }
+
+    .heart {
+      position: fixed;
+      color: red;
+      font-size: 20px;
+      animation: float 4s linear infinite;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(0); opacity: 1;}
+      100% {transform: translateY(-100vh); opacity: 0;}
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container" id="lockScreen">
+  <h1>🔐 Private Surprise</h1>
+  <p>Password daalo 💕</p>
+  <input type="password" id="password">
+  <br>
+  <button onclick="checkPassword()">Enter</button>
+</div>
+
+<div class="container hidden" id="mainContent">
+  <h1>🎂 Happy Birthday Kuldeep 🎉</h1>
+  <p>Distance chahe jitni bhi ho,  
+  you are always close to my heart 💗</p>
+
+  <div class="memory">
+    <img src="memory1.jpg">
+    <img src="memory2.jpg">
+    <img src="memory3.jpg">
+  </div>
+
+  <img src="frog.png" class="frog">
+  <p>🐸 Your little lucky frog</p>
+</div>
+
+<audio id="music" src="music.mp3"></audio>
+
+<script>
+  function checkPassword() {
+    const pass = document.getElementById("password").value;
+    if (pass === "kuldeep") {
+      document.getElementById("lockScreen").style.display = "none";
+      document.getElementById("mainContent").classList.remove("hidden");
+
+      const music = document.getElementById("music");
+      music.currentTime = 37;
+      music.play();
+
+      setInterval(createHeart, 300);
+    } else {
+      alert("Wrong password 😛");
+    }
+  }
+
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.bottom = "0px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 4000);
+  }
+</script>
+
+</body>
+</html>
